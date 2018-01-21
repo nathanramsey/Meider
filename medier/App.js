@@ -1,13 +1,18 @@
-//import libararies for making component
-import React from 'react';
-import { Text, AppRegistry } from 'react-native';
-import Header from './src/components/header';
+import React, { Component } from 'react';
+import { Image, StyleSheet } from 'react-native';
 
-//make a component
-const App = () => (
-  <Header />
-);
+export default class App extends Component {
+  render() {
+    return (
+      <Image source={{uri: 'http://i.imgur.com/IGlBYaC.jpg'}} style={s.backgroundImage} />
+    );
+  }
+}
 
-
-//make the component available for other parts of the app
-export default App;
+const s = StyleSheet.create({
+  backgroundImage: {
+      flex: 1,
+      width: null,
+      height: null,
+  }
+});
